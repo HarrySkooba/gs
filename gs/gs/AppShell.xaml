@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gs.AppShell"
+       xmlns:views="clr-namespace:gs.View">
+    <TabBar>
+        <ShellContent
+            Title="Оружие"
+            Icon="pistol.png"
+            ContentTemplate="{DataTemplate views:GunPage}"
+            />
+        <ShellContent
+             Title="Патроны"
+             Icon="ammos.png"
+             ContentTemplate="{DataTemplate views:AmmoPage}"
+            />
+        <ShellContent
+             Title="Типы О-П"
+             Icon="type.png"
+             ContentTemplate="{DataTemplate views:TypePage}"
+            />
+    </TabBar>
+</Shell>

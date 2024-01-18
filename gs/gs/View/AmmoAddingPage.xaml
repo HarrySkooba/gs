@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gs.View.AmmoAddingPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20">
+
+                <Entry Placeholder="Название патронов" Text="{Binding Name}"/>
+                <Entry Placeholder="Укажите путь к картинке" Text="{Binding ImagePath}"/>
+                <Entry Placeholder="Информация о патронах" Text="{Binding Info}"/>
+                <Entry Placeholder="Цена патронов" Text="{Binding Price}"/>
+                <Label Text="Какой это тип патронов:"/>
+                <Picker x:Name="typePicker"
+        Title="Выберите тип..."
+        SelectedIndexChanged="OnTypePickerSelectedIndexChanged">
+                    <Picker.ItemDisplayBinding>
+                        <Binding Path="Title" />
+                    </Picker.ItemDisplayBinding>
+                </Picker>
+                <Grid ColumnDefinitions="*,*">
+
+                    <Button Text="Сохранить" Clicked="SaveAmmo"/>
+
+                    <Button Grid.Column="1" Text="Удалить" Clicked="DeleteAmmo"/>
+
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gs.View.TypeAddingPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="20">
+                
+                <Editor Placeholder="Название Типа" 
+                        Text="{Binding Title}" 
+                        HeightRequest="50"/>
+
+                <Grid ColumnDefinitions="*,*">
+
+                    <Button Text="Сохранить" Clicked="SaveType"/>
+
+                    <Button Grid.Column="1" Text="Удалить" Clicked="DeleteType"/>
+
+                </Grid>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
